@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Terminal, Github, Menu, X } from "lucide-react";
+import { Github, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import Image from "next/image";
 
 const navigation = [
   {
@@ -56,7 +57,7 @@ export default function DocsLayout({
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <Link href="/" className="flex items-center gap-2.5 font-bold text-xl">
-              <Terminal className="h-6 w-6 text-primary" />
+              <Image src="/logo.png" alt="Xacos" width={30} height={30} />
               <span>Xacos</span>
             </Link>
             <nav className="flex items-center gap-8">
@@ -99,11 +100,10 @@ export default function DocsLayout({
                             key={item.href}
                             href={item.href}
                             onClick={() => setMobileMenuOpen(false)}
-                            className={`block rounded-md px-3 py-2 text-sm transition-colors hover:bg-red-50 ${
-                              pathname === item.href
-                                ? "bg-red-50 font-medium text-primary"
-                                : "text-muted-foreground hover:text-foreground"
-                            }`}
+                            className={`block rounded-md px-3 py-2 text-sm transition-colors hover:bg-red-50 ${pathname === item.href
+                              ? "bg-red-50 font-medium text-primary"
+                              : "text-muted-foreground hover:text-foreground"
+                              }`}
                           >
                             {item.title}
                           </Link>
@@ -129,7 +129,7 @@ export default function DocsLayout({
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="flex flex-col items-center md:items-start gap-3">
               <Link href="/" className="flex items-center gap-2.5 font-bold text-xl">
-                <Terminal className="h-6 w-6 text-primary" />
+                <Image src="/logo.png" alt="Xacos" width={30} height={30} />
                 <span>Xacos</span>
               </Link>
               <p className="text-sm text-muted-foreground text-center md:text-left">
