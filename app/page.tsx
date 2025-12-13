@@ -101,7 +101,7 @@ export default function Home() {
               <Link href="/docs" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
                 Documentation
               </Link>
-              <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <Link href="https://github.com/zoherr/xacos" target="_blank" rel="noopener noreferrer">
                 <Button variant="ghost" size="sm" className="gap-2">
                   <Github className="h-4 w-4" />
                   <span className="hidden sm:inline">GitHub</span>
@@ -112,10 +112,10 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="flex-1 pt-16">
+      <main className="flex-1 pt-8">
         <section className="relative overflow-hidden">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8 pt-24 pb-16 md:pt-32 md:pb-24 lg:pt-40 lg:pb-32">
-            <div className="mx-auto max-w-4xl text-center">
+          <div className="mx-auto max-w-7l px-6 lg:px-8 pt-24 pb-16 md:pt-32 md:pb-24 lg:pt-40 lg:pb-32">
+            <div className="mx-auto max-w-6xl text-center">
               <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-red-200 bg-red-50/50 px-4 py-1.5">
                 <Sparkles className="h-3.5 w-3.5 text-primary" />
                 <span className="text-sm font-medium text-foreground">Backend scaffolding for Node.js</span>
@@ -124,7 +124,7 @@ export default function Home() {
               <h1 className="mb-6 text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
                 Build production-ready{" "}
                 <span className="bg-gradient-to-r from-gray-900 via-primary to-gray-900 bg-clip-text text-transparent">
-                  Express.js
+                  Node.js
                 </span>{" "}
                 backends
               </h1>
@@ -160,7 +160,7 @@ export default function Home() {
                     </Link>
                   </Button>
                   <Button asChild variant="outline" size="lg" className="gap-2 h-12 px-8">
-                    <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
+                    <Link href="https://github.com/zoherr/xacos" target="_blank" rel="noopener noreferrer">
                       <Github className="h-4 w-4" />
                       View on GitHub
                     </Link>
@@ -329,7 +329,7 @@ export default function Home() {
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="gap-2 h-12 px-8">
-                  <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
+                  <Link href="https://github.com/zoherr/xacos" target="_blank" rel="noopener noreferrer">
                     <Github className="h-4 w-4" />
                     View on GitHub
                   </Link>
@@ -356,10 +356,10 @@ export default function Home() {
               <Link href="/docs" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
                 Documentation
               </Link>
-              <Link href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+              <Link href="https://github.com/zoherr/xacos" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
                 GitHub
               </Link>
-              <Link href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+              <Link href="https://github.com/zoherr/xacos" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
                 License
               </Link>
             </nav>
