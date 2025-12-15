@@ -1,7 +1,6 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { Check, Copy, Terminal, Code2, Database, Boxes, Layers, Gauge, Github, ArrowRight, Zap, Shield, Rocket, Sparkles } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -19,32 +18,32 @@ export default function Home() {
 
   const features = [
     {
-      icon: <Code2 className="h-8 w-8 text-primary" />,
+      icon: <Code2 className="h-8 w-8 text-[#09f]" />,
       title: "TypeScript Support",
       description: "Full TypeScript support with type safety and modern ES features built in."
     },
     {
-      icon: <Database className="h-8 w-8 text-primary" />,
+      icon: <Database className="h-8 w-8 text-[#09f]" />,
       title: "Database Ready",
       description: "Integrated MongoDB or Prisma ORM setup with migrations and models."
     },
     {
-      icon: <Boxes className="h-8 w-8 text-primary" />,
+      icon: <Boxes className="h-8 w-8 text-[#09f]" />,
       title: "Redis Caching",
       description: "Built-in Redis integration for caching and session management."
     },
     {
-      icon: <Layers className="h-8 w-8 text-primary" />,
+      icon: <Layers className="h-8 w-8 text-[#09f]" />,
       title: "Message Queues",
       description: "BullMQ integration for background jobs and message processing."
     },
     {
-      icon: <Terminal className="h-8 w-8 text-primary" />,
+      icon: <Terminal className="h-8 w-8 text-[#09f]" />,
       title: "Docker Support",
       description: "Production-ready Docker configuration with multi-stage builds."
     },
     {
-      icon: <Gauge className="h-8 w-8 text-primary" />,
+      icon: <Gauge className="h-8 w-8 text-[#09f]" />,
       title: "CI/CD Ready",
       description: "GitHub Actions workflows for testing and deployment included."
     }
@@ -73,38 +72,43 @@ export default function Home() {
 
   const whyXacos = [
     {
-      icon: <Zap className="h-6 w-6 text-primary" />,
+      icon: <Zap className="h-6 w-6 text-[#09f]" />,
       title: "Fast Setup",
       description: "Go from idea to running API in under 2 minutes"
     },
     {
-      icon: <Shield className="h-6 w-6 text-primary" />,
+      icon: <Shield className="h-6 w-6 text-[#09f]" />,
       title: "Production Ready",
       description: "Security best practices and error handling built-in"
     },
     {
-      icon: <Rocket className="h-6 w-6 text-primary" />,
+      icon: <Rocket className="h-6 w-6 text-[#09f]" />,
       title: "Scalable Architecture",
       description: "Professional folder structure that grows with your team"
     }
   ];
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <header className="fixed top-0 left-0 right-0 z-50 border-b bg-white/80 backdrop-blur-md">
+    <div className="flex flex-col min-h-screen bg-[#0b0f15] relative overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-[#124dff]/30 rounded-full blur-[150px]"></div>
+        <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-[#09f]/20 rounded-full blur-[120px]"></div>
+        <div className="absolute bottom-0 left-1/2 w-[700px] h-[700px] bg-[#369bfd]/20 rounded-full blur-[180px]"></div>
+      </div>
+
+      <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-[#0b0f15]/80 backdrop-blur-xl">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
-            <Link href="/" className="flex items-center gap-2.5 font-bold text-xl">
-              {/* <Terminal className="h-6 w-6 text-primary" /> */}
+            <Link href="/" className="flex items-center gap-2.5 font-bold text-xl text-white">
               <Image src="/logo.png" alt="Xacos" width={30} height={30} />
               <span>Xacos</span>
             </Link>
             <nav className="flex items-center gap-8">
-              <Link href="/docs" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
+              <Link href="/docs" className="text-sm font-medium text-white/70 hover:text-white transition-colors">
                 Documentation
               </Link>
               <Link href="https://github.com/zoherr/xacos" target="_blank" rel="noopener noreferrer">
-                <Button variant="ghost" size="sm" className="gap-2">
+                <Button variant="ghost" size="sm" className="gap-2 text-white/70 hover:text-white hover:bg-white/10">
                   <Github className="h-4 w-4" />
                   <span className="hidden sm:inline">GitHub</span>
                 </Button>
@@ -114,39 +118,39 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="flex-1 pt-8">
+      <main className="flex-1 pt-8 relative z-10">
         <section className="relative overflow-hidden">
           <div className="mx-auto max-w-7l px-6 lg:px-8 pt-24 pb-16 md:pt-32 md:pb-24 lg:pt-40 lg:pb-32">
             <div className="mx-auto max-w-6xl text-center">
-              <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-red-200 bg-red-50/50 px-4 py-1.5">
-                <Sparkles className="h-3.5 w-3.5 text-primary" />
-                <span className="text-sm font-medium text-foreground">Backend scaffolding for Node.js</span>
+              <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-[#09f]/20 bg-[#09f]/5 backdrop-blur-sm px-4 py-1.5">
+                <Sparkles className="h-3.5 w-3.5 text-[#09f]" />
+                <span className="text-sm font-medium text-white/90">Backend scaffolding for Node.js</span>
               </div>
 
-              <h1 className="mb-6 text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
+              <h1 className="mb-6 text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl text-white">
                 Build production-ready{" "}
-                <span className="bg-gradient-to-r from-gray-900 via-primary to-gray-900 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#09f] via-[#124dff] to-[#369bfd] bg-clip-text text-transparent">
                   Node.js
                 </span>{" "}
                 backends
               </h1>
 
-              <p className="mx-auto mb-12 max-w-2xl text-lg leading-8 text-muted-foreground md:text-xl">
+              <p className="mx-auto mb-12 max-w-2xl text-lg leading-8 text-white/60 md:text-xl">
                 Scaffold professional Express.js backends with TypeScript, Prisma, Redis, and Docker.
                 Zero configuration, industry best practices built-in.
               </p>
 
               <div className="flex flex-col items-center gap-6">
                 <div className="relative w-full max-w-2xl">
-                  <div className="flex items-center gap-2 rounded-lg border bg-muted/50 px-4 py-3">
-                    <Terminal className="h-4 w-4 text-muted-foreground flex-shrink-0" />
-                    <code className="flex-1 text-sm font-mono overflow-x-auto">
+                  <div className="flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 backdrop-blur-xl px-4 py-3">
+                    <Terminal className="h-4 w-4 text-[#09f] flex-shrink-0" />
+                    <code className="flex-1 text-sm font-mono overflow-x-auto text-white/90">
                       {primaryCommand}
                     </code>
                     <Button
                       size="icon"
                       variant="ghost"
-                      className="h-8 w-8 flex-shrink-0"
+                      className="h-8 w-8 flex-shrink-0 hover:bg-white/10 text-white/70 hover:text-white"
                       onClick={() => copyToClipboard(primaryCommand, "hero")}
                     >
                       {copied === "hero" ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />}
@@ -155,13 +159,13 @@ export default function Home() {
                 </div>
 
                 <div className="flex flex-col sm:flex-row items-center gap-4">
-                  <Button asChild size="lg" className="gap-2 h-12 px-8">
+                  <Button asChild size="lg" className="gap-2 h-12 px-8 bg-[#09f] hover:bg-[#0af] text-white border-0">
                     <Link href="/docs">
                       Get Started
                       <ArrowRight className="h-4 w-4" />
                     </Link>
                   </Button>
-                  <Button asChild variant="outline" size="lg" className="gap-2 h-12 px-8">
+                  <Button asChild variant="outline" size="lg" className="gap-2 h-12 px-8 border-white/20 bg-white/5 backdrop-blur-sm hover:bg-white/10 text-white">
                     <Link href="https://github.com/zoherr/xacos" target="_blank" rel="noopener noreferrer">
                       <Github className="h-4 w-4" />
                       View on GitHub
@@ -173,13 +177,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="border-t">
+        <section className="border-t border-white/5">
           <div className="mx-auto max-w-7xl px-6 lg:px-8 py-24 md:py-32">
             <div className="mx-auto max-w-2xl text-center mb-16">
-              <h2 className="text-4xl font-bold tracking-tight sm:text-5xl mb-4">
+              <h2 className="text-4xl font-bold tracking-tight sm:text-5xl mb-4 text-white">
                 Everything you need
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-white/60">
                 Built-in support for the tools you need to build production-ready APIs
               </p>
             </div>
@@ -188,13 +192,13 @@ export default function Home() {
               <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 {features.map((feature, index) => (
                   <div key={index} className="relative group">
-                    <div className="flex flex-col gap-4 p-6 rounded-lg border bg-card hover:shadow-md transition-all">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
+                    <div className="flex flex-col gap-4 p-6 rounded-lg border border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10 hover:border-[#09f]/30 transition-all">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#09f]/10">
                         {feature.icon}
                       </div>
                       <div>
-                        <h3 className="font-semibold mb-2">{feature.title}</h3>
-                        <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
+                        <h3 className="font-semibold mb-2 text-white">{feature.title}</h3>
+                        <p className="text-sm text-white/60 leading-relaxed">{feature.description}</p>
                       </div>
                     </div>
                   </div>
@@ -204,13 +208,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="border-t bg-muted/20">
+        <section className="border-t border-white/5 bg-white/[0.02]">
           <div className="mx-auto max-w-7xl px-6 lg:px-8 py-24 md:py-32">
             <div className="mx-auto max-w-2xl text-center mb-16">
-              <h2 className="text-4xl font-bold tracking-tight sm:text-5xl mb-4">
+              <h2 className="text-4xl font-bold tracking-tight sm:text-5xl mb-4 text-white">
                 How it works
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-white/60">
                 Three simple steps to your production-ready backend
               </p>
             </div>
@@ -219,15 +223,15 @@ export default function Home() {
               <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
                 {steps.map((step, index) => (
                   <div key={index} className="flex flex-col items-center text-center">
-                    <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
-                      <span className="text-2xl font-bold text-primary">{step.number}</span>
+                    <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#09f]/10 border border-[#09f]/20">
+                      <span className="text-2xl font-bold text-[#09f]">{step.number}</span>
                     </div>
-                    <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
-                    <p className="text-muted-foreground mb-6 leading-relaxed">
+                    <h3 className="text-xl font-semibold mb-3 text-white">{step.title}</h3>
+                    <p className="text-white/60 mb-6 leading-relaxed">
                       {step.description}
                     </p>
-                    <div className="w-full rounded-lg border bg-card px-4 py-3">
-                      <code className="text-sm font-mono text-center block">
+                    <div className="w-full rounded-lg border border-white/10 bg-white/5 backdrop-blur-sm px-4 py-3">
+                      <code className="text-sm font-mono text-center block text-white/80">
                         {step.command}
                       </code>
                     </div>
@@ -238,19 +242,19 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="border-t">
+        <section className="border-t border-white/5">
           <div className="mx-auto max-w-7xl px-6 lg:px-8 py-24 md:py-32">
             <div className="mx-auto max-w-3xl">
               <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold tracking-tight sm:text-5xl mb-4">
+                <h2 className="text-4xl font-bold tracking-tight sm:text-5xl mb-4 text-white">
                   Example workflow
                 </h2>
-                <p className="text-lg text-muted-foreground">
+                <p className="text-lg text-white/60">
                   From zero to deployed in minutes
                 </p>
               </div>
 
-              <div className="rounded-xl border bg-card p-8 shadow-sm">
+              <div className="rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm p-8 shadow-xl">
                 <div className="space-y-6">
                   {[
                     { label: "Initialize project", command: "npx xacos init my-api --ts --prisma", id: "workflow1" },
@@ -260,20 +264,20 @@ export default function Home() {
                   ].map((item, index) => (
                     <div key={index} className="space-y-2">
                       <div className="flex items-center justify-between">
-                        <span className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
+                        <span className="text-xs font-medium text-[#09f] uppercase tracking-wide">
                           {item.label}
                         </span>
                         <Button
                           size="icon"
                           variant="ghost"
-                          className="h-8 w-8"
+                          className="h-8 w-8 hover:bg-white/10 text-white/70 hover:text-white"
                           onClick={() => copyToClipboard(item.command, item.id)}
                         >
                           {copied === item.id ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />}
                         </Button>
                       </div>
-                      <div className="rounded-lg bg-muted px-4 py-3">
-                        <code className="text-sm font-mono block overflow-x-auto">
+                      <div className="rounded-lg bg-white/5 border border-white/10 px-4 py-3">
+                        <code className="text-sm font-mono block overflow-x-auto text-white/80">
                           {item.command}
                         </code>
                       </div>
@@ -285,13 +289,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="border-t bg-muted/20">
+        <section className="border-t border-white/5 bg-white/[0.02]">
           <div className="mx-auto max-w-7xl px-6 lg:px-8 py-24 md:py-32">
             <div className="mx-auto max-w-2xl text-center mb-16">
-              <h2 className="text-4xl font-bold tracking-tight sm:text-5xl mb-4">
+              <h2 className="text-4xl font-bold tracking-tight sm:text-5xl mb-4 text-white">
                 Why Xacos?
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-white/60">
                 Built by developers, for developers who value their time
               </p>
             </div>
@@ -300,11 +304,11 @@ export default function Home() {
               <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
                 {whyXacos.map((item, index) => (
                   <div key={index} className="flex flex-col items-center text-center">
-                    <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
+                    <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-[#09f]/10 border border-[#09f]/20">
                       {item.icon}
                     </div>
-                    <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <h3 className="text-xl font-semibold mb-3 text-white">{item.title}</h3>
+                    <p className="text-white/60 leading-relaxed">
                       {item.description}
                     </p>
                   </div>
@@ -314,23 +318,23 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="border-t">
+        <section className="border-t border-white/5">
           <div className="mx-auto max-w-7xl px-6 lg:px-8 py-24 md:py-32">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-4xl font-bold tracking-tight sm:text-5xl mb-6">
+              <h2 className="text-4xl font-bold tracking-tight sm:text-5xl mb-6 text-white">
                 Ready to build your next backend?
               </h2>
-              <p className="text-lg text-muted-foreground mb-10">
+              <p className="text-lg text-white/60 mb-10">
                 Join developers building production-ready backends with Xacos
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Button asChild size="lg" className="gap-2 h-12 px-8">
+                <Button asChild size="lg" className="gap-2 h-12 px-8 bg-[#09f] hover:bg-[#0af] text-white border-0">
                   <Link href="/docs">
                     Get Started
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="gap-2 h-12 px-8">
+                <Button asChild variant="outline" size="lg" className="gap-2 h-12 px-8 border-white/20 bg-white/5 backdrop-blur-sm hover:bg-white/10 text-white">
                   <Link href="https://github.com/zoherr/xacos" target="_blank" rel="noopener noreferrer">
                     <Github className="h-4 w-4" />
                     View on GitHub
@@ -342,26 +346,26 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="border-t">
+      <footer className="border-t border-white/5 relative z-10">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 py-12 md:py-16">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="flex flex-col items-center md:items-start gap-3">
-              <Link href="/" className="flex items-center gap-2.5 font-bold text-xl">
+              <Link href="/" className="flex items-center gap-2.5 font-bold text-xl text-white">
                 <Image src="/logo.png" alt="Xacos" width={30} height={30} />
                 <span>Xacos</span>
               </Link>
-              <p className="text-sm text-muted-foreground text-center md:text-left">
+              <p className="text-sm text-white/60 text-center md:text-left">
                 Built with ❤️ for the Node.js community
               </p>
             </div>
             <nav className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
-              <Link href="/docs" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+              <Link href="/docs" className="text-sm font-medium text-white/60 hover:text-white transition-colors">
                 Documentation
               </Link>
-              <Link href="https://github.com/zoherr/xacos" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+              <Link href="https://github.com/zoherr/xacos" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-white/60 hover:text-white transition-colors">
                 GitHub
               </Link>
-              <Link href="https://github.com/zoherr/xacos" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+              <Link href="https://github.com/zoherr/xacos" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-white/60 hover:text-white transition-colors">
                 License
               </Link>
             </nav>
