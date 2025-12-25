@@ -17,67 +17,73 @@ export default function AddCommandPage() {
     <div className="prose">
       <h1>xacos add</h1>
       <p>
-        Add new features, middleware, or integrations to an existing Xacos project.
+        Create a <strong>new backend module</strong> with controller, service,
+        model, and routes.
       </p>
 
       <h2>Usage</h2>
-      <div className="relative">
-        <pre>
-          <code>xacos add &lt;feature&gt;</code>
-        </pre>
-      </div>
-
-      <h2>Available Features</h2>
-      <ul>
-        <li><code>auth</code> - Add authentication middleware (JWT, sessions)</li>
-        <li><code>cors</code> - Add CORS middleware</li>
-        <li><code>helmet</code> - Add Helmet security headers</li>
-        <li><code>morgan</code> - Add Morgan HTTP request logger</li>
-        <li><code>rate-limit</code> - Add rate limiting middleware</li>
-        <li><code>compression</code> - Add response compression</li>
-      </ul>
+      <pre>
+        <code>xacos add &lt;name&gt;</code>
+      </pre>
 
       <h2>Examples</h2>
 
-      <h3>Add Authentication</h3>
       <div className="relative">
         <pre>
-          <code>xacos add auth</code>
+          <code>xacos add Users</code>
         </pre>
         <Button
           size="icon"
           variant="ghost"
           className="absolute top-2 right-2"
-          onClick={() => copyToClipboard("xacos add auth", "auth")}
+          onClick={() => copyToClipboard("xacos add Users", "users")}
         >
-          {copied === "auth" ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+          {copied === "users" ? (
+            <Check className="h-4 w-4" />
+          ) : (
+            <Copy className="h-4 w-4" />
+          )}
         </Button>
       </div>
 
-      <h3>Add CORS and Helmet</h3>
       <div className="relative">
         <pre>
-          <code>xacos add cors{'\n'}xacos add helmet</code>
+          <code>
+            xacos add notifications{"\n"}
+            xacos add products
+          </code>
         </pre>
         <Button
           size="icon"
           variant="ghost"
           className="absolute top-2 right-2"
-          onClick={() => copyToClipboard("xacos add cors\nxacos add helmet", "cors")}
+          onClick={() =>
+            copyToClipboard(
+              "xacos add notifications\nxacos add products",
+              "multi"
+            )
+          }
         >
-          {copied === "cors" ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+          {copied === "multi" ? (
+            <Check className="h-4 w-4" />
+          ) : (
+            <Copy className="h-4 w-4" />
+          )}
         </Button>
       </div>
 
-      <h2>What Happens</h2>
-      <p>When you add a feature, Xacos will:</p>
+      <h2>What It Generates</h2>
       <ul>
-        <li>Install required npm packages</li>
-        <li>Generate configuration files</li>
-        <li>Add middleware to your Express app</li>
-        <li>Update your .env.example with new variables</li>
-        <li>Create example usage documentation</li>
+        <li><code>src/controllers/&lt;name&gt;.controller.js</code></li>
+        <li><code>src/services/&lt;name&gt;.service.js</code></li>
+        <li><code>src/models/&lt;name&gt;.model.js</code></li>
+        <li><code>src/routes/&lt;name&gt;.routes.js</code></li>
       </ul>
+
+      <p>
+        The route is <strong>automatically registered</strong> in
+        <code> src/routes/index.js</code>.
+      </p>
     </div>
   );
 }
