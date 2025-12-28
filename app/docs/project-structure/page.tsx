@@ -1,13 +1,15 @@
+"use client";
+
 export default function ProjectStructurePage() {
   return (
     <div className="prose">
       <h1>Project Structure</h1>
       <p>
-        Xacos generates a well-organized project structure following industry best practices
-        for Express.js applications.
+        Xacos OS generates a well-organized project structure following industry best practices
+        for Express.js applications. Choose between single projects or monorepos.
       </p>
 
-      <h2>Directory Overview</h2>
+      <h2>Single Project Structure</h2>
       <pre>
         <code>{`my-api/
 ├── src/
@@ -35,16 +37,62 @@ export default function ProjectStructurePage() {
 │   │   └── user.validator.ts
 │   ├── types/           # TypeScript types
 │   │   └── index.ts
-│   ├── app.ts           # Express app setup
-│   └── server.ts        # Server entry point
-├── tests/               # Test files
+│   ├── flows/           # Xacos pipelines (XFlow)
+│   │   └── user.signup.flow.ts
+│   ├── events/           # Event definitions
+│   │   ├── user.created.ts
+│   │   └── order.paid.ts
+│   ├── adapters/        # Vendor-agnostic adapters
+│   │   ├── mailer/
+│   │   └── database/
+│   ├── sockets/          # WebSocket/Socket.io
+│   ├── queues/           # Message queues
+│   ├── subscribers/      # Event subscribers
+│   ├── app.ts            # Express app setup
+│   └── server.ts         # Server entry point
+├── tests/                # Test files
 │   ├── unit/
 │   └── integration/
-├── .env.example         # Environment variables template
+├── .env.example          # Environment variables template
 ├── .gitignore
-├── tsconfig.json        # TypeScript configuration
+├── tsconfig.json         # TypeScript configuration
 ├── package.json
+├── xacos.json            # Xacos configuration
 └── README.md`}</code>
+      </pre>
+
+      <h2>Monorepo Structure</h2>
+      <pre>
+        <code>{`my-org/
+├── apps/
+│   ├── api/              # Express/Fastify backend
+│   │   └── src/
+│   ├── worker/           # BullMQ / cron jobs
+│   │   └── src/
+│   ├── realtime/         # WebSocket / Socket.io server
+│   │   └── src/
+│   ├── web/              # (future) Next.js
+│   └── admin/            # (future) Admin dashboard
+│
+├── packages/
+│   ├── config/           # shared env, eslint, tsconfig
+│   │   ├── eslint-config/
+│   │   ├── tsconfig/
+│   │   └── env/
+│   ├── logger/           # shared logger
+│   ├── database/         # Prisma / DB clients
+│   ├── auth/             # authentication logic
+│   ├── mailer/           # vendor-agnostic mailer
+│   └── events/           # typed event contracts
+│
+├── infra/
+│   ├── docker/
+│   ├── terraform/
+│   └── k8s/
+│
+├── xacos.json            # Xacos configuration
+├── package.json
+└── pnpm-workspace.yaml   # or npm/yarn workspaces`}</code>
       </pre>
 
       <h2>Key Directories</h2>
@@ -85,6 +133,24 @@ export default function ProjectStructurePage() {
         and other application settings.
       </p>
 
+      <h3>flows/</h3>
+      <p>
+        Xacos pipelines (XFlow) - typed, composable, event-driven workflows.
+        Code-first alternative to visual workflow builders.
+      </p>
+
+      <h3>events/</h3>
+      <p>
+        Event definitions with typed contracts. First-class events for building
+        distributed, event-driven systems.
+      </p>
+
+      <h3>adapters/</h3>
+      <p>
+        Vendor-agnostic adapter implementations. Switch between providers (Prisma/Mongoose,
+        Resend/SMTP, etc.) at runtime without code changes.
+      </p>
+
       <h3>validators/</h3>
       <p>
         Input validation schemas using libraries like Zod or Joi to ensure data
@@ -107,8 +173,21 @@ export default function ProjectStructurePage() {
       <h2>TypeScript Support</h2>
       <p>
         When using the <code>--ts</code> flag, Xacos sets up a complete TypeScript configuration
-        with proper types for Express, your database ORM, and all other dependencies.
+        with proper types for Express, your database ORM, and all other dependencies. All generated
+        code is 100% TypeScript-correct with zero <code>any</code> types (unless explicitly justified).
       </p>
+
+      <h2>Monorepo Benefits</h2>
+      <p>
+        Monorepos enable you to:
+      </p>
+      <ul>
+        <li>Share code across multiple services</li>
+        <li>Maintain consistent tooling and configurations</li>
+        <li>Build and test everything together</li>
+        <li>Deploy services independently</li>
+        <li>Manage dependencies centrally</li>
+      </ul>
     </div>
   );
 }

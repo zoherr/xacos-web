@@ -17,12 +17,12 @@ export default function DocsPage() {
     <div className="prose">
       <h1>Installation</h1>
       <p>
-        Xacos CLI is a powerful backend scaffolding tool for Node.js that helps you create
-        production-ready Express.js applications with industry best practices.
+        <strong>Xacos OS 2.0</strong> is a powerful CLI tool that helps you build production-ready
+        Node.js backend projects with Express.js, following industry best practices.
       </p>
 
       <h2>Global Installation</h2>
-      <p>Install Xacos CLI globally to use it anywhere on your system:</p>
+      <p>Install Xacos globally to use it anywhere on your system:</p>
       <div className="relative">
         <pre>
           <code>npm install -g xacos</code>
@@ -39,8 +39,7 @@ export default function DocsPage() {
 
       <h2>Using npx</h2>
       <p>
-        You can also use npx to run Xacos without installing it globally. This is the recommended
-        approach for trying out the CLI or if you want to always use the latest version:
+        You can also use npx to run Xacos without installing it globally:
       </p>
       <div className="relative">
         <pre>
@@ -57,7 +56,7 @@ export default function DocsPage() {
       </div>
 
       <h2>Verify Installation</h2>
-      <p>After installation, verify that Xacos is correctly installed by checking the version:</p>
+      <p>After installation, verify that Xacos is correctly installed:</p>
       <div className="relative">
         <pre>
           <code>xacos --version</code>
@@ -74,15 +73,23 @@ export default function DocsPage() {
 
       <h2>Requirements</h2>
       <ul>
-        <li>Node.js 16.x or higher</li>
-        <li>npm 7.x or higher (or yarn/pnpm)</li>
+        <li>Node.js 18.x or higher</li>
+        <li>npm 9.x or higher (or yarn/pnpm)</li>
         <li>Git (for version control)</li>
       </ul>
 
+      <h2>What Xacos Does</h2>
+      <p>Xacos helps you:</p>
+      <ul>
+        <li>Scaffold professional backend projects</li>
+        <li>Generate modules, controllers, services automatically</li>
+        <li>Manage events and pipelines</li>
+        <li>Deploy with infrastructure as code</li>
+        <li>Monitor your applications</li>
+      </ul>
+
       <h2>Next Steps</h2>
-      <p>
-        Now that you have Xacos installed, you can:
-      </p>
+      <p>Now that you have Xacos installed, you can:</p>
       <ul>
         <li>Follow the Quick Start guide to create your first project</li>
         <li>Learn about the project structure</li>

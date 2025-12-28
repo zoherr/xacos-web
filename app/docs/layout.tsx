@@ -14,6 +14,7 @@ const navigation = [
       { title: "Installation", href: "/docs" },
       { title: "Quick Start", href: "/docs/quick-start" },
       { title: "Project Structure", href: "/docs/project-structure" },
+      { title: "Examples", href: "/docs/examples" },
     ],
   },
   {
@@ -21,6 +22,13 @@ const navigation = [
     items: [
       { title: "init", href: "/docs/commands/init" },
       { title: "add", href: "/docs/commands/add" },
+      { title: "create:flow", href: "/docs/commands/create-flow" },
+      { title: "add:adapter", href: "/docs/commands/add-adapter" },
+      { title: "events:list", href: "/docs/commands/events-list" },
+      { title: "events:graph", href: "/docs/commands/events-graph" },
+      { title: "plugin install", href: "/docs/commands/plugin-install" },
+      { title: "monitor", href: "/docs/commands/monitor" },
+      { title: "deploy", href: "/docs/commands/deploy" },
       { title: "create:redis", href: "/docs/commands/create-redis" },
       { title: "create:prisma", href: "/docs/commands/create-prisma" },
       { title: "create:ws", href: "/docs/commands/create-ws" },

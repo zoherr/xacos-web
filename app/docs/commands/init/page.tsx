@@ -33,10 +33,12 @@ export default function InitCommandPage() {
         <li><code>--ts</code> - Initialize with TypeScript</li>
         <li><code>--js</code> - Initialize with JavaScript (default)</li>
         <li><code>--prisma</code> - Add Prisma ORM</li>
-        <li><code>--mongodb</code> - Add MongoDB with Mongoose</li>
-        <li><code>--redis</code> - Add Redis caching setup</li>
+        <li><code>--mongodb</code> - Add MongoDB setup</li>
+        <li><code>--redis</code> - Add Redis caching</li>
+        <li><code>--ws</code> - Include native WebSocket</li>
+        <li><code>--socket.io</code> - Include Socket.io</li>
         <li><code>--docker</code> - Include Docker configuration</li>
-        <li><code>--git</code> - Initialize Git repository</li>
+        <li><code>--git-action</code> - Include GitHub Actions CI/CD</li>
       </ul>
 
       <h2>Examples</h2>
@@ -95,7 +97,6 @@ export default function InitCommandPage() {
         <li>Environment variables template</li>
         <li>Package.json with scripts</li>
         <li>README with project documentation</li>
-        <li>Git repository (if --git flag is used)</li>
       </ul>
 
       <h2>Next Steps</h2>
