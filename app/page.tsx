@@ -1,5 +1,6 @@
 "use client";
 
+import LiveGithubIssues from "@/components/LiveGithubIssues";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Check, Copy, Terminal, Code2, Database, Boxes, Layers, Gauge, Github, ArrowRight, Zap, Shield, Rocket, Sparkles } from "lucide-react";
@@ -313,6 +314,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <LiveGithubIssues />
 
         <section className="border-t">
           <div className="mx-auto max-w-7xl px-6 lg:px-8 py-24 md:py-32">
